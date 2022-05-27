@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <html>
+	<head>
+		<title>Menu Desplegable</title>
+		<style type="text/css">
+			
+			* {
+				margin:0px;
+				padding:0px;
+			}
+			
+			#header {
+				margin:auto;
+				width:500px;
+				font-family:Arial, Helvetica, sans-serif;
+			}
+			
+			ul, ol {
+				list-style:none;
+			}
+			
+			.nav {
+				width:500px; /*Le establecemos un ancho*/
+				margin:0 auto; /*Centramos automaticamente*/
+			}
+
+			.nav > li {
+				float:left;
+			}
+			
+			.nav li a {
+				background-color:#000;
+				color:#fff;
+				text-decoration:none;
+				padding:10px 12px;
+				display:block;
+			}
+			
+			.nav li a:hover {
+				background-color:#434343;
+			}
+			
+			.nav li ul {
+				display:none;
+				position:absolute;
+				min-width:140px;
+			}
+			
+			.nav li:hover > ul {
+				display:block;
+			}
+			
+			.nav li ul li {
+				position:relative;
+			}
+			
+			.nav li ul li ul {
+				right:-140px;
+				top:0px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="header">
+			<nav> <!-- Aqui estamos iniciando la nueva etiqueta nav -->
+				<ul class="nav">
+					<li><a href="">Inicio</a></li>
+					<li><a href="">Planetas</a>
+						<ul>
+							<li><a href="mercurio.html">Mercurio</a></li>
+							<li><a href="venus.html">Venus</a></li>
+							<li><a href="marte.html">Marte</a></li>
+							<li><a href="">Planetas gaseoso</a>
+								<ul>
+									<li><a href="jupiter.html">Jupiter</a></li>
+									<li><a href="saturno.html">Saturno</a></li>
+									<li><a href="uranoo.html">Urano</a></li>
+									<li><a href="neptuno.html">Neptuno</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+                    
+					<li><a href="tierra.html">Tierra</a>
+						<ul>
+						</ul>
+					</li>
+					<li><a href="conclusi%C3%B3n.html">Conclusión y referencias </a></li>
+				</ul>
+			</nav><!-- Aqui estamos cerrando la nueva etiqueta nav -->
+		</div>
+	</body>
+</html>
+    <body>
+    <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyB5xr_JCfBU-vZyySFQhVT6m4xKuO6fg3o",
+    authDomain: "proyecto-tercer-trimetre.firebaseapp.com",
+    projectId: "proyecto-tercer-trimetre",
+    storageBucket: "proyecto-tercer-trimetre.appspot.com",
+    messagingSenderId: "396032476935",
+    appId: "1:396032476935:web:cfb8562adede67afdda7a2",
+    measurementId: "G-1C47LVHDVZ"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+        
+        <body bgcolor="Lavender">
+        <br>
+        <br>
+        <br>
+     <center><h1>Características de los planetas del sistema solar</h1></center> 
+        <br>
+      
+  <h3><center>Natalia Aparicio, Angela Barcenas, Daniela Guerrero </center> </h3>
+        <br>
+        <br>
+        <br>
+<p> * Durante los útimos 2 trimestres de este año escolar, las áreas de física, química y biologia se unieron para la creación de un proyecto en conjunto en el cual hemos estado trabajando los ultimos dos trimestres. </p>
+<p> * Nuestro grupo decidío trabajar sobre las características de los planetas, pues nos interesamos en investigar cuales de ellas permiten alvergar vida</p>
+    
+  <br>
+            <br>
+            <br>
+            
+
+   <html>
+	<head>
+		<style>
+			.slide {
+				position: relative;
+				box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+				margin-top: 26px;
+			}
+
+			.slide-inner {
+				position: relative;
+				overflow: hidden;
+				width: 100%;
+				height: calc( 300px + 3em);
+			}
+
+			.slide-open:checked + .slide-item {
+				position: static;
+				opacity: 100;
+			}
+
+			.slide-item {
+				position: absolute;
+				opacity: 0;
+				-webkit-transition: opacity 0.6s ease-out;
+				transition: opacity 0.6s ease-out;
+			}
+
+			.slide-item img {
+				display: block;
+				height:400;
+				max-width: 100%;
+			}
+
+			.slide-control {
+				background: rgba(0, 0, 0, 0.28);
+				border-radius: 50%;
+				color: #fff;
+				cursor: pointer;
+				display: none;
+				font-size: 40px;
+				height: 40px;
+				line-height: 35px;
+				position: absolute;
+				top: 50%;
+				-webkit-transform: translate(0, -50%);
+				cursor: pointer;
+				-ms-transform: translate(0, -50%);
+				transform: translate(0, -50%);
+				text-align: center;
+				width: 40px;
+				z-index: 10;
+			}
+
+			.slide-control.prev {
+				left: 2%;
+			}
+
+			.slide-control.next {
+				right: 2%;
+			}
+
+			.slide-control:hover {
+				background: rgba(0, 0, 0, 0.8);
+				color: #aaaaaa;
+			}
+
+			#slide-1:checked ~ .control-1,
+			#slide-2:checked ~ .control-2,
+			#slide-3:checked ~ .control-3 {
+				display: block;
+			}
+
+			.slide-indicador {
+				list-style: none;
+				margin: 10;
+				padding: 0;
+				position: absolute;
+				bottom: 2%;
+				left: 0;
+				right: 0;
+				text-align: center;
+				z-index: 10;
+			}
+
+			.slide-indicador li {
+				display: inline-block;
+				margin: 5 10px;
+			}
+
+			.slide-circulo {
+				color: #828282;
+				cursor: pointer;
+				display: block;
+				font-size: 35px;
+			}
+
+			.slide-circulo:hover {
+				color: #aaaaaa;
+			}
+
+			#slide-1:checked ~ .control-1 ~ .slide-indicador 
+			 	li:nth-child(1) .slide-circulo,
+			#slide-2:checked ~ .control-2 ~ .slide-indicador 
+			 	 li:nth-child(2) .slide-circulo,
+			#slide-3:checked ~ .control-3 ~ .slide-indicador 
+			 	 li:nth-child(3) .slide-circulo {
+				color: #428bca;
+			}
+
+			#titulo {
+				width: 100%;
+				position: absolute;
+				padding: 0px;
+				margin: 0px auto;
+				text-align: center;
+				font-size: 27px;
+				color: rgba(255, 255, 255, 1);
+				font-family: 'Open Sans', sans-serif;
+				z-index: 9999;
+				text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), 
+			 	    -1px 0px 2px rgba(255, 255, 255, 0);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="slide">
+			<div class="slide-inner">
+				<input class="slide-open" type="radio" id="slide-1" 
+			 	     name="slide" aria-hidden="true" hidden="" checked="checked">
+				<div class="slide-item">
+					<center> <img src="img/Sistema-solar.jpg"> </center>
+				</div>
+				<input class="slide-open" type="radio" id="slide-2" 
+			 	     name="slide" aria-hidden="true" hidden="">
+				<div class="slide-item">
+					<center><img src="img/ejemplo.jpg"></center>
+            
+				</div>
+				<input class="slide-open" type="radio" id="slide-3" 
+			 	     name="slide" aria-hidden="true" hidden="">
+				<div class="slide-item">
+					<center><img src="img/dibujo.jpg"></center>
+				</div>
+				<label for="slide-3" class="slide-control prev control-1">‹</label>
+				<label for="slide-2" class="slide-control next control-1">›</label>
+				<label for="slide-1" class="slide-control prev control-2">‹</label>
+				<label for="slide-3" class="slide-control next control-2">›</label>
+				<label for="slide-2" class="slide-control prev control-3">‹</label>
+				<label for="slide-1" class="slide-control next control-3">›</label>
+				<ol class="slide-indicador">
+					<li>
+						<label for="slide-1" class="slide-circulo">•</label>
+					</li>
+					<li>
+						<label for="slide-2" class="slide-circulo">•</label>
+					</li>
+					<li>
+						<label for="slide-3" class="slide-circulo">•</label>
+					</li>
+				</ol>
+			</div>
+		</div>
+	</body>
+       <br>
+       <p> * Primero nos gustaría contextalualizar un poco acerca del sistema solar pues al ser un tema tan amplio es importante centarse unicamente en el enfoque que elegimos nosotas para este proyecto </p>
+       <br>
+       <br>
+       <h2>¿Cual es el objetivo del proyecto? </h2>
+       <br> 
+       <p> mediante este proyecto, queriamos averiguar un poco más acerca de porque no es posible que haya vida en otros de los planetas del sistema solar, y por que la tierra cumple con las condiciones perfeta para alvergar vida. Decidimos además realizar una pagina web como producto, pues nos peracio importante resaltar las nuevas tegnologías  presentes hoy en día. </p>
+       <br>
+       <h2> ¿Que es el sistema solar? </h2>
+       <br>
+       <p> *  El sistema solar, es un conjunto de planetas, estrellas, y elementos astronomicos que giran al rededor de una estrella llamada sol, nuestro sistema solar esta conformado por 8 planetas, 400 satelites naturales conocidos y 19 satelites asteroidales</p>
+       <br>
+       <br>
+</html>
+            
+            <br>
+    
+    
+    </body>
+   
+</body>
